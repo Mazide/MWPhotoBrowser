@@ -1530,7 +1530,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
 - (void)showControls { [self setControlsHidden:NO animated:YES permanent:NO]; }
 - (void)toggleControls {
     [self.delegate photoBrowserDidTapPhoto:self];
-    [self setControlsHidden:![self areControlsHidden] animated:YES permanent:NO];
+    [self setControlsHidden:![self areControlsHidden] animated:YES permanent:YES];
 }
 
 #pragma mark - Properties
