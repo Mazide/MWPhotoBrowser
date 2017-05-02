@@ -1387,7 +1387,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
         [tmpGridController willMoveToParentViewController:nil];
         [tmpGridController.view removeFromSuperview];
         [tmpGridController removeFromParentViewController];
-        [self setControlsHidden:NO animated:YES permanent:NO]; // retrigger timer
+        [self setControlsHidden:NO animated:YES permanent:YES]; // retrigger timer
     }];
 
 }
@@ -1526,8 +1526,8 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
 }
 
 - (BOOL)areControlsHidden { return (_toolbar.alpha == 0); }
-- (void)hideControls { [self setControlsHidden:YES animated:YES permanent:NO]; }
-- (void)showControls { [self setControlsHidden:NO animated:YES permanent:NO]; }
+- (void)hideControls { [self setControlsHidden:YES animated:YES permanent:YES]; }
+- (void)showControls { [self setControlsHidden:NO animated:YES permanent:YES]; }
 - (void)toggleControls {
     [self.delegate photoBrowserDidTapPhoto:self];
     [self setControlsHidden:![self areControlsHidden] animated:YES permanent:YES];
