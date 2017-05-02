@@ -1093,13 +1093,13 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
             }
             self.title = [NSString stringWithFormat:@"%lu %@", (unsigned long)numberOfPhotos, photosText];
         }
-    } else if (numberOfPhotos > 1) {
+    } else {
         if ([_delegate respondsToSelector:@selector(photoBrowser:titleForPhotoAtIndex:)]) {
             self.title = [_delegate photoBrowser:self titleForPhotoAtIndex:_currentPageIndex];
         } else {
             self.title = [NSString stringWithFormat:@"%lu %@ %lu", (unsigned long)(_currentPageIndex+1), NSLocalizedString(@"of", @"Used in the context: 'Showing 1 of 3 items'"), (unsigned long)numberOfPhotos];
         }
-	} 
+	}
 	
 	// Buttons
 	_previousButton.enabled = (_currentPageIndex > 0);
