@@ -1099,9 +1099,7 @@ static void * MWVideoPlayerObservation = &MWVideoPlayerObservation;
         } else {
             self.title = [NSString stringWithFormat:@"%lu %@ %lu", (unsigned long)(_currentPageIndex+1), NSLocalizedString(@"of", @"Used in the context: 'Showing 1 of 3 items'"), (unsigned long)numberOfPhotos];
         }
-	} else {
-		self.title = nil;
-	}
+	} 
 	
 	// Buttons
 	_previousButton.enabled = (_currentPageIndex > 0);
